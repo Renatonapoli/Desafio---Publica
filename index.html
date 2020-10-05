@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<title>Tabela de jogos de Maria</title>
+		<link rel="icon" href="bola.png" type="image/png">
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+
+	</head>
+	<body>
+
+		<header>
+			<div class="container">
+				<h1 class="titulo">Tabela dos Jogos</h1>
+			</div>
+		</header>
+		<main>
+
+				<section class="container">
+			    <h2>Jogos de Maria</h2>
+			    <label for="filtrar-tabela"><strong>Filtre:</strong>  Clique duas vezes no jogo que deseja excluir da tabela!</label>
+			    <input type="text" name="filtro" id="filtrar-tabela" placeholder="Digite o número da partida...">
+			    <table>
+			       <thead>
+			         <tr>
+			            <th>Jogo</th>
+			            <th>Placar</th>
+			            <th>Mínimo da temporada</th>
+			            <th>Máximo da temporada</th>
+			            <th>Quebra recorde min.</th>
+			            <th>Quebra recorde min.</th>
+			    	</tr>
+				  </thead>
+					<tbody id="tabela-jogos">
+						<tr class="partida" id="primeira-partida">
+							<td class="info-jogo">1</td>
+							<td class="info-placar">12</td>
+							<td class="info-minimoTemporada">12</td>
+							<td class="info-maximoTemporada">12</td>
+							<td class="info-quebraRecordeMin">0</td>
+							<td class="info-quebraRecordeMax">0</td>
+						</tr>
+
+						<tr class="partida">
+							<td class="info-jogo">2</td>
+							<td class="info-placar">24</td>
+							<td class="info-minimoTemporada">12</td>
+							<td class="info-maximoTemporada">24</td>
+							<td class="info-quebraRecordeMin">0</td>
+							<td class="info-quebraRecordeMax">1</td>
+						</tr>
+
+						<tr class="partida">
+							<td class="info-jogo">3</td>
+							<td class="info-placar">10</td>
+							<td class="info-minimoTemporada">10</td>
+							<td class="info-maximoTemporada">24</td>
+							<td class="info-quebraRecordeMin">1</td>
+							<td class="info-quebraRecordeMax">1</td>
+						</tr>
+
+						<tr class="partida">
+							<td class="info-jogo">4</td>
+							<td class="info-placar">24</td>
+							<td class="info-minimoTemporada">10</td>
+							<td class="info-maximoTemporada">24</td>
+							<td class="info-quebraRecordeMin">1</td>
+							<td class="info-quebraRecordeMax">1</td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			</main>
+
+			<section class="container">
+			    <h2 id="titulo-form">Adicionar nova partida/jogo</h2>
+			    <span id="mensagem-erro"></span>
+			    <form id="form-adiciona">
+			        <div class="grupo">
+			            <label for="jogo">Jogo:</label>
+			            <input id="jogo" name="jogo" type="text" placeholder="digite o número da partida" class="campo campo-medio">
+			        </div>
+			        <div class="grupo">
+			            <label for="placar">Placar:</label>
+			            <input id="placar" name="placar" type="text" placeholder="digite o placar" class="campo campo-medio">
+			        </div>
+			        <div class="grupo">
+			            <label for="minimoTemporada">Mínimo da Temporada:</label>
+			            <input id="minimoTemporada" name="minimoTemporada" type="text" placeholder="digite o mínimo da temporada" class="campo campo-medio">
+			        </div>
+			        <div class="grupo">
+			            <label for="maximo-temporada">Máximo da temporada:</label>
+			            <input id="maximoTemporada" name="maximoTemporada" type="text" placeholder="digite o máximo da temporada" class="campo campo-medio">
+			        </div>
+			        <div class="grupo">
+			            <label for="quebraRecordeMin">Quebra do recorde min.:</label>
+			            <input id="quebraRecordeMin" name="quebraRecordeMin" type="text" placeholder="digite a quebra do recorde mínima" class="campo campo-medio">
+			        </div>
+			        <div class="grupo">
+			            <label for="quebraRecordeMax">Quebra do recorde máx.:</label>
+			            <input id="quebraRecordeMax" name="quebraRecordeMax" type="text" placeholder="digite a quebra do recorde máximo" class="campo campo-medio">
+			        </div>
+
+			        <button id="adicionar-partida" class="botao bto-principal">Adicionar</button>
+			    </form>
+			</section>
+
+		<script src="js/form.js"></script>
+		<script src="js/remover-jogo.js" ></script>
+		<script src="js/filtra.js" ></script>
+		
+	</body>
+</html>
